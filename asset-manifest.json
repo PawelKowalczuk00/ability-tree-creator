@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/ability-tree-creator/static/css/main.5f361e03.chunk.css",
-    "main.js": "/ability-tree-creator/static/js/main.6c26bfff.chunk.js",
-    "main.js.map": "/ability-tree-creator/static/js/main.6c26bfff.chunk.js.map",
+    "main.css": "/ability-tree-creator/static/css/main.9397e159.chunk.css",
+    "main.js": "/ability-tree-creator/static/js/main.96d27fbc.chunk.js",
+    "main.js.map": "/ability-tree-creator/static/js/main.96d27fbc.chunk.js.map",
     "runtime-main.js": "/ability-tree-creator/static/js/runtime-main.3f864328.js",
     "runtime-main.js.map": "/ability-tree-creator/static/js/runtime-main.3f864328.js.map",
-    "static/js/2.ca8cdd8b.chunk.js": "/ability-tree-creator/static/js/2.ca8cdd8b.chunk.js",
-    "static/js/2.ca8cdd8b.chunk.js.map": "/ability-tree-creator/static/js/2.ca8cdd8b.chunk.js.map",
+    "static/js/2.578f68c1.chunk.js": "/ability-tree-creator/static/js/2.578f68c1.chunk.js",
+    "static/js/2.578f68c1.chunk.js.map": "/ability-tree-creator/static/js/2.578f68c1.chunk.js.map",
     "index.html": "/ability-tree-creator/index.html",
-    "precache-manifest.f6e8bd25e9dbc48a31b6c5b3d87f98cb.js": "/ability-tree-creator/precache-manifest.f6e8bd25e9dbc48a31b6c5b3d87f98cb.js",
+    "precache-manifest.c0e66371edca0e75e4d3b0974e3a9a2e.js": "/ability-tree-creator/precache-manifest.c0e66371edca0e75e4d3b0974e3a9a2e.js",
     "service-worker.js": "/ability-tree-creator/service-worker.js",
-    "static/css/main.5f361e03.chunk.css.map": "/ability-tree-creator/static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.ca8cdd8b.chunk.js.LICENSE.txt": "/ability-tree-creator/static/js/2.ca8cdd8b.chunk.js.LICENSE.txt"
+    "static/css/main.9397e159.chunk.css.map": "/ability-tree-creator/static/css/main.9397e159.chunk.css.map",
+    "static/js/2.578f68c1.chunk.js.LICENSE.txt": "/ability-tree-creator/static/js/2.578f68c1.chunk.js.LICENSE.txt",
+    "static/media/logo.png": "/ability-tree-creator/static/media/logo.a2770e0b.png"
   },
   "entrypoints": [
     "static/js/runtime-main.3f864328.js",
-    "static/js/2.ca8cdd8b.chunk.js",
-    "static/css/main.5f361e03.chunk.css",
-    "static/js/main.6c26bfff.chunk.js"
+    "static/js/2.578f68c1.chunk.js",
+    "static/css/main.9397e159.chunk.css",
+    "static/js/main.96d27fbc.chunk.js"
   ]
 }
