@@ -1,0 +1,23 @@
+.error {
+    position: fixed;
+    top: 50px;
+    width: 40vw;
+    left: 30vw;
+    margin: 0px;
+    padding: 0.8em;
+    border: 2px solid red;
+    background-color: rgb(255, 150, 150);
+    z-index: 10;
+    text-align: center;
+}
+
+.error * {
+    font-size: 20px;
+}
+
+.error > button {
+    font-weight: bolder;
+    padding: 0.3em 0.6em;
+    border: 1px solid red;
+    background-color: rgb(255, 150, 150);
+}

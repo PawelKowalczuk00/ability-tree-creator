@@ -1,0 +1,77 @@
+div.container {
+    display: grid;
+    grid-template-areas: 
+    'box1 box2'
+    'box3 box4';
+    gap: 8px;
+    background-color: rgba(255, 50, 50, 0.33);
+
+    height: 100%;
+    max-height: 508px;
+    max-width: 508px;
+    overflow: hidden;
+}
+
+div.box {
+    background-color: red;
+    height: 100%;
+    max-height: 250px;
+    padding-left: 50%;
+}
+
+div.box1 {
+    grid-area: box1;
+    animation: box1 1s infinite;
+}
+
+div.box2 {
+    grid-area: box2;
+    animation: box2 1s infinite;
+}
+
+div.box3 {
+    grid-area: box3;
+    animation: box3 1s infinite;
+}
+
+div.box4 {
+    grid-area: box4;
+    animation: box4 1s infinite;
+}
+
+@keyframes box1 {
+    0% {opacity: 1;}
+    17% {opacity: 0.333;}
+    33% {opacity: 0.170;}
+    50% {opacity: 0;}
+    66% {opacity: 0.666;}
+    83% {opacity: 0.830;}
+    100% {opacity: 1;}
+}    
+@keyframes box2 {
+    0% {opacity: 0.333;}
+    17% {opacity: 1;}
+    33% {opacity: 0.333;}
+    50% {opacity: 0.170;}
+    66% {opacity: 0;}
+    83% {opacity: 0.170;}
+    100% {opacity: 0.333;}
+}
+@keyframes box4 {
+    0% {opacity: 0.170;}
+    17% {opacity: 0.333;}
+    33% {opacity: 1;}
+    50% {opacity: 0.333;}
+    66% {opacity: 0.170;}
+    83% {opacity: 0;}
+    100% {opacity: 0.170;}
+}
+@keyframes box3 {
+    0% {opacity: 0;}
+    17% {opacity: 0.171;}
+    33% {opacity: 0.333;}
+    50% {opacity: 1;}
+    66% {opacity: 0.170;}
+    83% {opacity: 0.080;}
+    100% {opacity: 0;}
+}

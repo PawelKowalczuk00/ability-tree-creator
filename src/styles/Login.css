@@ -1,0 +1,25 @@
+div.content,
+div.content > form.row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content .row,
+.content input {
+    margin: 5px;
+    padding: 5px;
+}
+
+.content input[type="submit"] {
+    color: red;
+    font-size: 25px;
+    font-weight: 600;
+    padding: 0.4em;
+}
+
+div.content.loader {
+    width: 100px;
+    height: 100px;
+    margin: 50px;
+}

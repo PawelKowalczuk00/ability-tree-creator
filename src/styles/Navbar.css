@@ -1,0 +1,54 @@
+nav {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 50px;
+    background: linear-gradient(0deg, rgb(150, 150, 150) 0%, rgb(250, 38, 38) 100%);
+    border-bottom: 5px double black;
+    display: flex;
+    justify-content: center;
+}
+
+img.logo {
+    max-height: 52px;
+}
+
+@media (max-width: 600px) {
+    .account {
+        font-weight: 500;
+        font-size: 15px;
+        right: 5px;
+        top: 12px;
+    }
+}
+
+@media (min-width: 601px) {
+    .account {
+        font-weight: 600;
+        font-size: 20px;
+        right: 15px;
+        top: 8px;
+    }
+}
+
+.account {
+    position: absolute;
+    padding: 5px;
+}
+
+.account:hover {
+    background-color: red;
+}
+
+.account a:link {
+    text-decoration: none;
+    color: black;
+}
+
+.account a:visited {
+    color: black;
+}
+
+.account a:hover {
+    color: white;
+}

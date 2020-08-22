@@ -1,0 +1,70 @@
+.heroes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table {
+    border: 2px solid grey;
+}
+
+table,
+th,
+td {
+    border-collapse: collapse;
+    border-top: 2px solid grey;
+    border-bottom: 2px solid grey;
+    text-align: left;
+}
+
+@media (max-width: 600px) {
+    table {
+        width: 100%;
+        margin: 2px;
+    }
+}
+
+@media (min-width: 601px) {
+    table {
+        width: 80%;
+        margin: 15px;
+    }
+}
+
+thead {
+    margin: 15px;
+    color: red;
+}
+
+th, td {
+    padding: 15px;
+}
+
+tr:hover {
+    background-color: aquamarine;
+}
+
+tbody {
+    cursor: pointer;
+}
+
+tr.new-hero {
+    cursor: default;
+    background-color: antiquewhite;
+}
+
+.new-hero button {
+    font-weight: 900;
+    font-size: 30px;
+    padding: 5px 15px;
+    background-color: greenyellow;
+    border: 2px solid black;
+    transition: all 100s linear;
+}
+.new-hero button:hover {
+    transform: rotate(9999deg);
+}
+
+.heroes input {
+    padding: 5px;
+}

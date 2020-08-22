@@ -1,0 +1,16 @@
+footer {
+    position: absolute;
+    bottom: 0;
+    margin: 0.2em 0;
+    border-top: 1px solid grey;
+    font-size: 15px;
+    width: 100vw;
+    text-align: center;
+  }
+
+  div.white-opacity {
+      height: 100%;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.33);
+  }
+  
