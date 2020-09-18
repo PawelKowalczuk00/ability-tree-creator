@@ -3,13 +3,13 @@ import { Redirect } from "react-router-dom";
 import { useStateIfMounted } from "use-state-if-mounted";
 
 import useGlobal from "../store";
-import Loader from './utils/loaders/LoaderWidth.js';
+import Loader from './utils/loaders/LoaderHeight.js';
 
 import '../styles/Heroes.css';
 
-export default () => {
+export default props => {
     const [redirectTo, setRedirectTo] = useStateIfMounted(false);
-    const [showLoader, setShowLoader] = useStateIfMounted(false);
+    const [showLoader, setShowLoader] = useStateIfMounted(true);
     const [heroes, setHeroes] = useState([]);
     const [name, setName] = useState();
     const [globalState, globalActions] = useGlobal();
@@ -22,7 +22,7 @@ export default () => {
         else if (response?.status < 300)
             setHeroes(response.data);
 
-        setShowLoader(false)
+        setShowLoader(false);
     }
 
     useEffect(() => {
@@ -32,8 +32,7 @@ export default () => {
     const onNewHeroAdd = e => {
         globalActions.heroes.addOne({ name })
             .then(res => {
-                globalActions.heroes.expose(res._id)
-                setRedirectTo(`/ability-tree-creator/hero`);
+                setRedirectTo(`hero/${res._id}`);
             })
             .catch(er => {
                 console.log('er :>> ', er);
@@ -41,12 +40,11 @@ export default () => {
     }
 
     const renderBody = () => {
-        console.log('heroes :>> ', heroes);
         return (
             <>
                 {heroes.map((hero, index) => {
                     return (
-                        <tr key={hero._id}>
+                        <tr key={hero._id} onClick={e => setRedirectTo(`hero/${hero._id}`)}>
                             <td>
                                 {index + 1}
                             </td>
@@ -72,14 +70,18 @@ export default () => {
     const renderConditionally = () => {
         if (redirectTo)
             return (
-                <tr>
-                    <Redirect to={`/ability-tree-creator/${redirectTo}`} />
-                </tr>
+                <>
+                    <Redirect to={`ability-tree-creator/${redirectTo}`} />
+                </>
             );
         else if (showLoader)
             return (
                 <tr className="content">
+                    <td></td>
+                    <td></td>
                     <Loader />
+                    <td></td>
+                    <td></td>
                 </tr>
             );
         else

@@ -1,0 +1,61 @@
+.hero-details .tree {
+    max-width: 80%;
+}
+
+.hero-details .tree .preview {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-items: center;
+    background-color: rgb(146, 140, 140);
+    border: 5px groove rgb(146, 140, 140);
+    padding: 5px;
+    margin: 5px;
+}
+
+.hero-details .tree .preview img {
+    padding: 2px;
+    width: 30px;
+    height: 30px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.hero-details .tree .preview .thumbnail {
+    padding: 4px;
+    margin: 2px;
+    border-right: 1px solid black;
+}
+
+button.new-tree  {
+    font-weight: 900;
+    font-size: 30px;
+    padding: 5px 15px;
+    background-color: greenyellow;
+    border: 2px solid black;
+    transition: all 100s linear;
+    margin-left: auto;
+}
+button.new-tree:hover {
+    background-color: black;
+    border: 2px solid greenyellow;
+    color: greenyellow;
+}
+
+.tree .board form {
+    background-color: antiquewhite;
+    padding: 10px;
+}
+
+.tree .board form input {
+    padding: 5px;
+    display: block;
+}
+
+.tree .board form input[type="submit"] {
+    margin: 10px;
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}

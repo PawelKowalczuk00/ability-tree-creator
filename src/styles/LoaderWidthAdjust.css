@@ -7,7 +7,7 @@ div.container {
     background-color: rgba(255, 50, 50, 0.33);
 
     width: 100%;
-    max-width: 508px;
+    max-width: 25vw;
     overflow: hidden;
 }
 

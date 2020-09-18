@@ -1,4 +1,4 @@
-div.container {
+td.container {
     display: grid;
     grid-template-areas: 
     'box1 box2'
@@ -6,33 +6,34 @@ div.container {
     gap: 8px;
     background-color: rgba(255, 50, 50, 0.33);
 
-    height: 100%;
-    max-height: 508px;
-    max-width: 75px;
+    width: 19%;
+    max-width: 25vw;
     overflow: hidden;
 }
 
-div.box {
+span.box {
     background-color: red;
-    height: 100%;
+    width: 100%;
+    max-width: 250px;
+    padding-top: 100%;
 }
 
-div.box1 {
+span.box1 {
     grid-area: box1;
     animation: box1 1s infinite;
 }
 
-div.box2 {
+span.box2 {
     grid-area: box2;
     animation: box2 1s infinite;
 }
 
-div.box3 {
+span.box3 {
     grid-area: box3;
     animation: box3 1s infinite;
 }
 
-div.box4 {
+span.box4 {
     grid-area: box4;
     animation: box4 1s infinite;
 }

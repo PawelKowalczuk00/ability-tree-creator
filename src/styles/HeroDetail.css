@@ -1,0 +1,29 @@
+div.hero-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-details {
+    font-size: 20px;
+}
+
+.hero-details .removeBtn {
+    background-color: red;
+    color: white;
+    border: 1px solid black;
+    font-size: 20px;
+    padding: 5px;
+}
+.hero-details .removeBtn:hover {
+    background-color: white;
+    color: red;
+}
+
+.hero-details h2 {
+    text-transform: Uppercase;
+    margin-bottom: .25em;
+    font-family: 'Rubik', sans-serif;
+    font-size: 6rem;
+    color: #be3030;
+}

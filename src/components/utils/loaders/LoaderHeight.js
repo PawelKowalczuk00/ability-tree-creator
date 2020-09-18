@@ -2,10 +2,10 @@ import React from 'react';
 import '../../../styles/LoaderHeightAdjust.css'
 
 export default () => {
-    return <div className="container">
-        <div className="box upper box1"></div>
-        <div className="box upper box2"></div>
-        <div className="box bottom box3"></div>
-        <div className="box bottom box4"></div>
-    </div>
+    return <td className="container">
+        <span className="box upper box1"></span>
+        <span className="box upper box2"></span>
+        <span className="box bottom box3"></span>
+        <span className="box bottom box4"></span>
+    </td>
 }
