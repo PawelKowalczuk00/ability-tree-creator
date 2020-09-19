@@ -70,7 +70,7 @@ export const deleteOne = async (store, _id) => {
         .catch(er => {
             console.error(er);
             if (er.response) {
-                store.actions.error.show(`Could not get a hero. ${er.response.data}`);
+                store.actions.error.show(`Could not delete a hero. ${er.response.data}`);
             } else {
                 store.actions.error.show(`Unexpexted error with request to the server.`);
             }

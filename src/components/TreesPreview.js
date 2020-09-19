@@ -4,6 +4,7 @@ import '../styles/TreesPreview.css';
 
 import useGlobal from "../store";
 import Loader from "./utils/loaders/LoaderWidth";
+import Abilities from "./Abilities";
 
 export default props => {
 
@@ -23,7 +24,7 @@ export default props => {
             setDetailedTrees(treeList.map(response => {
                 return response.data
             }));
-            setCurrent(trees.length-1);
+            setCurrent(trees.length - 1);
         }
     }
 
@@ -43,21 +44,38 @@ export default props => {
             })
     }
 
+    const onRemoveTreeClick = async () => {
+        globalActions.cover.showCoverLoader();
+        const response = await globalActions.trees.deleteOne(detailedTrees[current]._id);
+        globalActions.cover.hideCoverLoader();
+        if (response?.status === 200) {
+            if (detailedTrees.length > 0)
+                setCurrent(detailedTrees.length - 1);
+            else setCurrent('new');
+        }
+    }
+
     const renderConditionally = () => {
         if (current === 'loader')
             return <Loader />
         else if (current === 'new')
             return (
-                <form onSubmit={onNewTreeSubmit}>
-                    <label>Name <input type="text" name="name" onChange={e => setName(e.target.value)} /></label>
-                    <label>Picture URL <input type="text" name="imgUrl" onChange={e => setImgUrl(e.target.value)} /></label>
-                    <input type="submit" value="Create new ability tree" />
-                </form>
+                <>
+                    <form onSubmit={onNewTreeSubmit}>
+                        <h4>Create new tree</h4>
+                        <label>Name <input type="text" name="name" onChange={e => setName(e.target.value)} /></label>
+                        <label>Picture URL <input type="text" name="imgUrl" onChange={e => setImgUrl(e.target.value)} /></label>
+                        <input type="submit" value="Create new ability tree" />
+                    </form>
+                </>
             );
         else return (
-            <div className="abilities">
-                Abilities of {JSON.stringify(detailedTrees[current])}
-            </div>
+            <>
+                <button className="removeBtn" onClick={onRemoveTreeClick}>
+                    Delete Tree
+                </button>
+                <Abilities heroId={props.heroId} tree={detailedTrees[current] || []}/>
+            </>
         );
     }
 
@@ -66,12 +84,14 @@ export default props => {
             <>
                 {detailedTrees.map((tree, index) => {
                     return (
-                        <div className="thumbnail" key={tree._id} onClick={() => setCurrent(index)}>
-                            <img src={tree.imgUrl} alt="" /> <br />
-                            <p>
-                                {tree.name}
-                            </p>
-                        </div>
+                        <>
+                            <div className="thumbnail" key={tree._id} onClick={() => setCurrent(index)}>
+                                <p>
+                                    {tree.name}
+                                </p>
+                            </div>
+                            <div className="border"></div>
+                        </>
                     );
                 })}
             </>
@@ -82,7 +102,7 @@ export default props => {
         <div className="tree">
             <div className="preview">
                 {renderThumbnails()}
-                <button className="new-tree" onClick={() => setCurrent('new')}>
+                <button className="add-btn" onClick={() => setCurrent('new')}>
                     +
                 </button>
             </div>

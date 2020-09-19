@@ -4,14 +4,14 @@ import useGlobalHook from "use-global-hook";
 import * as actions from "../actions";
 
 const initialState = {
-  token: undefined,
+  token: localStorage.getItem('token') || undefined,
   error: {
     display: 'none',
     message: undefined
   },
-  exposedHero: {
-    name: '',
-    _id: undefined
+  cover: {
+    loaderDisplay: 'none',
+    bgDisplay: 'none'
   }
 };
 

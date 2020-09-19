@@ -4,42 +4,36 @@
 
 .hero-details .tree .preview {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    align-items: center;
+    flex-wrap: wrap;
     background-color: rgb(146, 140, 140);
     border: 5px groove rgb(146, 140, 140);
     padding: 5px;
     margin: 5px;
 }
 
-.hero-details .tree .preview img {
-    padding: 2px;
-    width: 30px;
-    height: 30px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
 .hero-details .tree .preview .thumbnail {
-    padding: 4px;
+    padding: 8px 20px;
+    text-align: center;
     margin: 2px;
-    border-right: 1px solid black;
+    cursor: pointer;
+    background-color: rgb(100, 95, 95);
+    border-radius: 15px;
 }
 
-button.new-tree  {
-    font-weight: 900;
-    font-size: 30px;
-    padding: 5px 15px;
-    background-color: greenyellow;
-    border: 2px solid black;
-    transition: all 100s linear;
-    margin-left: auto;
+.hero-details .tree .preview .thumbnail:hover {
+    font-style: italic;
 }
-button.new-tree:hover {
-    background-color: black;
-    border: 2px solid greenyellow;
-    color: greenyellow;
+
+.hero-details .tree .preview .border {
+    border-right: 2px groove black;
+    width: 0px;
+    height: 50px;
+}
+
+.hero-details .tree .preview button.add-btn  {
+    justify-self: end;
 }
 
 .tree .board form {
@@ -58,4 +52,10 @@ button.new-tree:hover {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+}
+
+.tree .board .removeBtn {
+    margin-left: auto;
+    display: block;
+    margin-bottom: 10px;
 }

@@ -30,12 +30,16 @@ export default props => {
     }, []);
 
     const onNewHeroAdd = e => {
+        globalActions.cover.showCoverLoader();
         globalActions.heroes.addOne({ name })
             .then(res => {
-                setRedirectTo(`hero/${res._id}`);
+                setRedirectTo(`hero/${res.data._id}`);
             })
             .catch(er => {
                 console.log('er :>> ', er);
+            })
+            .finally(() => {
+                globalActions.cover.hideCoverLoader();
             })
     }
 
@@ -126,7 +130,7 @@ export default props => {
                             {(new Date()).toLocaleDateString()}
                         </td>
                         <td>
-                            <button onClick={onNewHeroAdd}>
+                            <button className="add-btn" onClick={onNewHeroAdd}>
                                 +
                             </button>
                         </td>

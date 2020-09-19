@@ -1,8 +1,8 @@
 import React from "react";
 
-import useGlobal from "../store";
+import useGlobal from "../../../store";
 
-import '../styles/Error.css'
+import '../../../styles/Error.css'
 
 export default () => {
   const [globalState, globalActions] = useGlobal();

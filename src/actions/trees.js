@@ -12,7 +12,7 @@ export const getOne = (store, _id) => {
         .catch(er => {
             console.error(er);
             if (er.response) {
-                store.actions.error.show(`Could not get a hero. ${er.response.data}`);
+                store.actions.error.show(`Could not get a tree. ${er.response.data}`);
             } else {
                 store.actions.error.show(`Unexpexted error with request to the server.`);
             }
@@ -36,7 +36,7 @@ export const addOne = (store, body, heroId) => {
         .catch(er => {
             console.error(er);
             if (er.response) {
-                store.actions.error.show(`Could not post a hero. ${er.response.data}`);
+                store.actions.error.show(`Could not post a tree. ${er.response.data}`);
             } else {
                 store.actions.error.show(`Unexpexted error with request to the server.`);
             }
@@ -55,7 +55,7 @@ export const deleteOne = (store, _id) => {
         .catch(er => {
             console.error(er);
             if (er.response) {
-                store.actions.error.show(`Could not get a hero. ${er.response.data}`);
+                store.actions.error.show(`Could not delete a tree. ${er.response.data}`);
             } else {
                 store.actions.error.show(`Unexpexted error with request to the server.`);
             }

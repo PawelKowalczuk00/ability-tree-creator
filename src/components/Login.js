@@ -7,16 +7,28 @@ import Loader from './utils/loaders/LoaderWidth.js';
 
 import '../styles/Login.css';
 
-let redirectTo = false;
-let showLoader = false;
-let email, setEmail, password, setPassword, setRedirectTo, setShowLoader, globalState, globalActions, isMounted, setIsMounted;
-
 export default () => {
-    [email, setEmail] = useState();
-    [password, setPassword] = useState();
-    [redirectTo, setRedirectTo] = useStateIfMounted();
-    [showLoader, setShowLoader] = useStateIfMounted();
-    [globalState, globalActions] = useGlobal();
+    const [email, setEmail] = useState();
+    const [password, setPassword] = useState();
+    const [redirectTo, setRedirectTo] = useStateIfMounted(false);
+    const [showLoader, setShowLoader] = useStateIfMounted(false);
+    const [globalState, globalActions] = useGlobal();
+
+    const onLoginSubmit = async e => {
+        e.preventDefault();
+        setShowLoader(true);
+
+        globalActions.userDetails.login({
+            email, password
+        })
+            .then(res => {
+                if (res >= 200 && res < 300)
+                    setRedirectTo('/ability-tree-creator');
+            })
+            .finally(() => {
+                setShowLoader(false);
+            });
+    }
 
     if (redirectTo)
         return (
@@ -54,19 +66,3 @@ export default () => {
         </div>
     );
 };
-
-const onLoginSubmit = async e => {
-    e.preventDefault();
-    setShowLoader(true);
-
-    globalActions.userDetails.login({
-        email, password
-    })
-        .then(res => {
-            if (res >= 200 && res < 300)
-                setRedirectTo('/ability-tree-creator');
-        })
-        .finally(() => {
-            setShowLoader(false);
-        });
-}

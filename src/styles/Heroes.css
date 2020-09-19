@@ -53,7 +53,7 @@ tr.new-hero {
     background-color: antiquewhite;
 }
 
-.new-hero button {
+.add-btn {
     font-weight: 900;
     font-size: 30px;
     padding: 5px 15px;
@@ -61,7 +61,7 @@ tr.new-hero {
     border: 2px solid black;
     transition: all 100s linear;
 }
-.new-hero button:hover {
+.add-btn:hover {
     transform: rotate(9999deg);
 }
 

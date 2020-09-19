@@ -32,8 +32,9 @@ export default props => {
     }, []);
 
     const onDeleteClick = async e => {
-        e.target.disabled = true;
+        globalActions.cover.showCoverLoader();
         const response = await globalActions.heroes.deleteOne(hero._id);
+        globalActions.cover.hideCoverLoader();
         if (response?.status === 200)
             setRedirectTo('/');
     }
