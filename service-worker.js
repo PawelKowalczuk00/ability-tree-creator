@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/ability-tree-creator/precache-manifest.a179398a86390075cdd9a0bf89653b6e.js"
+  "/ability-tree-creator/precache-manifest.68c35be8b4da9e97870dbbb472bb2246.js"
 );
 
 self.addEventListener('message', (event) => {
